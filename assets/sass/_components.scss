@@ -1,0 +1,54 @@
+@use "global" as g;
+
+/*============== BUTTONS =============*/
+
+.list__btn {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: g.$nt-very-dark-blue;
+  cursor: pointer;
+  padding: 2rem 0 1.5rem;
+  width: 100%;
+  text-align: left;
+
+  &::after {
+    float: right;
+    content: url(/assets/images/icon-arrow-down.svg);
+    transform: rotate(0deg);
+    transition: transform 0s;
+  }
+
+  &-active {
+    font-weight: g.$font-bold;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/*============== PANELS ===============*/
+.list__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.panel__content {
+  color: g.$nt-dark-blue;
+  padding-bottom: 2rem;
+}
+
+/*============= BOX =============*/
+
+.box-desktop {
+  display: none;
+
+  @include g.respond-to("large") {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 14rem;
+    left: -8rem;
+  }
+}

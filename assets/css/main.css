@@ -1,0 +1,215 @@
+/* ================ GOOGLE FONTS ==================== */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* ================ VARIABLES ==================*/
+/* ================ Breakpoints =============*/
+/* ================ Colors ===============*/
+/* =============== Font Weights =============*/
+/* =============== Font Sizes ==============*/
+/* ============= MIXINGS =============*/
+/* ============= BASE ================*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* ============== FAQ ================*/
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  margin: 15rem auto 4rem;
+  padding-bottom: 4rem;
+  /*=============== FAQ Responsive - Tablet =============*/
+  /*=============== FAQ Responsive - Desktop =============*/
+}
+.faq__img {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+.faq__img .illustration-mobile {
+  position: absolute;
+  top: -100%;
+  width: 100%;
+}
+.faq__img .illustration-desktop {
+  display: none;
+}
+.faq__img .shadow-mobile {
+  width: 100%;
+}
+.faq__img .shadow-desktop {
+  display: none;
+}
+.faq__list {
+  margin-top: 2rem;
+}
+.faq__list h2 {
+  font-weight: 700;
+  color: #1d1e35;
+  text-align: center;
+  font-size: 2.5em;
+}
+.faq__list-item {
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e7e7e9;
+}
+@media (min-width: 800px) {
+  .faq {
+    margin: 30vh auto 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 15vh auto 4rem;
+    overflow: hidden;
+    max-width: 820px;
+    max-height: 470px;
+    padding-bottom: 3rem;
+  }
+  .faq__img {
+    flex-basis: 50%;
+  }
+  .faq__img .illustration-mobile {
+    display: none;
+  }
+  .faq__img .shadow-mobile {
+    display: none;
+  }
+  .faq__img .illustration-desktop {
+    position: absolute;
+    display: block;
+    top: -13rem;
+    left: -5.5rem;
+    width: 35rem;
+    z-index: 3;
+  }
+  .faq__img .shadow-desktop {
+    position: absolute;
+    display: block;
+    width: 75rem;
+    top: -41rem;
+    left: -46rem;
+    z-index: 0;
+  }
+  .faq__list {
+    max-height: 410px;
+    flex-basis: 50%;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+  }
+  .faq__list h2 {
+    text-align: left;
+    margin-top: 3rem;
+  }
+  .faq__list-item {
+    margin: 0;
+    padding-right: 1.5rem;
+  }
+}
+
+/*=============== ATTRIBUTION ===============*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #1d1e35;
+}
+.attribution a {
+  color: #f47c57;
+  font-weight: 700;
+}
+
+/*============== BUTTONS =============*/
+.list__btn {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: #4a4b5e;
+  cursor: pointer;
+  padding: 2rem 0 1.5rem;
+  width: 100%;
+  text-align: left;
+}
+.list__btn::after {
+  float: right;
+  content: url(/assets/images/icon-arrow-down.svg);
+  transform: rotate(0deg);
+  transition: transform 0s;
+}
+.list__btn-active {
+  font-weight: 700;
+}
+.list__btn-active::after {
+  transform: rotate(180deg);
+}
+
+/*============== PANELS ===============*/
+.list__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel__content {
+  color: #787887;
+  padding-bottom: 2rem;
+}
+
+/*============= BOX =============*/
+.box-desktop {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .box-desktop {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 14rem;
+    left: -8rem;
+  }
+}
+
+.container {
+  width: 85%;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+@media (min-width: 800px) {
+  .container {
+    width: 70%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 60%;
+    min-width: 800px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
